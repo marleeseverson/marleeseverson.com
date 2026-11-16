@@ -1,0 +1,96 @@
+.contact {
+  padding-bottom: clamp(48px, 6vw, 96px);
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  text-decoration: none;
+  font-size: clamp(1.35rem, 5.6vw, 5.4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--fg);
+  overflow-wrap: anywhere;
+  transition: color 200ms ease;
+}
+
+.email:hover,
+.email:focus-visible {
+  color: var(--accent);
+}
+
+.emailIcon {
+  flex: none;
+  width: clamp(28px, 4vw, 56px);
+  height: clamp(28px, 4vw, 56px);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: clamp(40px, 6vw, 72px);
+}
+
+.link {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'label arrow'
+    'handle arrow';
+  gap: 4px 12px;
+  padding: 18px 0;
+  border-top: 1px solid var(--rule);
+  text-decoration: none;
+  transition: border-color 200ms ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  border-top-color: var(--fg);
+}
+
+.link:hover .linkArrow,
+.link:focus-visible .linkArrow {
+  color: var(--accent);
+  transform: translate(2px, -2px);
+}
+
+.linkLabel {
+  grid-area: label;
+  color: var(--muted);
+}
+
+.linkHandle {
+  grid-area: handle;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.linkArrow {
+  grid-area: arrow;
+  align-self: center;
+  width: 20px;
+  height: 20px;
+  transition:
+    transform 220ms ease,
+    color 220ms ease;
+}
+
+@media (max-width: 640px) {
+  .links {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

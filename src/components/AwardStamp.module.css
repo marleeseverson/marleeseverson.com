@@ -1,0 +1,48 @@
+.stamp {
+  position: relative;
+  width: var(--stamp-size, 164px);
+  height: var(--stamp-size, 164px);
+  color: var(--accent);
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.ringText {
+  font-family: var(--font-mono);
+  font-size: 15.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  fill: currentColor;
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 2px;
+  color: var(--fg);
+  line-height: 1;
+}
+
+.centerBig {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+}
+
+.centerSmall {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

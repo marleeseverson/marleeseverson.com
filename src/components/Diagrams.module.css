@@ -1,0 +1,112 @@
+.diagram {
+  display: grid;
+  gap: 12px;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  color: var(--fg);
+  font-family: var(--font-mono);
+  overflow: visible;
+}
+
+.edge {
+  color: var(--muted);
+  opacity: 0.55;
+  transition:
+    opacity 300ms ease,
+    color 300ms ease;
+}
+
+.edgeHot {
+  color: var(--accent);
+  opacity: 1;
+  transition:
+    opacity 300ms ease,
+    color 300ms ease;
+}
+
+.edgeLabel {
+  font-size: 9.5px;
+  fill: currentColor;
+  letter-spacing: 0.02em;
+  paint-order: stroke;
+  stroke: var(--bg);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.node {
+  color: var(--fg);
+  transition: color 300ms ease;
+}
+
+.nodeActive {
+  color: var(--accent);
+}
+
+.nodeActive circle {
+  fill: var(--accent);
+}
+
+.nodeActive .nodeLabel {
+  fill: var(--accent-ink);
+}
+
+.nodeLabel {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: -0.01em;
+  fill: var(--fg);
+  transition: fill 300ms ease;
+}
+
+.box {
+  color: var(--fg);
+}
+
+.boxTitle {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  fill: var(--muted);
+}
+
+.blockTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  fill: var(--fg);
+}
+
+.blockSub {
+  font-size: 8.5px;
+  fill: var(--muted);
+}
+
+@media (max-width: 480px) {
+  .diagram {
+    overflow-x: auto;
+  }
+  .svg {
+    min-width: 420px;
+  }
+}
+
+.wire {
+  color: var(--accent);
+}
+
+.wireLabel {
+  font-size: 8.5px;
+  fill: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.caption {
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}

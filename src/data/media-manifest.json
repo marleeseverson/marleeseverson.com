@@ -1,0 +1,54 @@
+{
+  "bobs-bullets/bullet-rain": {
+    "widths": [
+      1600,
+      1000,
+      600
+    ],
+    "width": 1919,
+    "height": 1199
+  },
+  "bobs-bullets/defeat-screen": {
+    "widths": [
+      1600,
+      1000,
+      600
+    ],
+    "width": 1918,
+    "height": 1199
+  },
+  "bobs-bullets/dialogue": {
+    "widths": [
+      1600,
+      1000,
+      600
+    ],
+    "width": 1918,
+    "height": 1198
+  },
+  "bobs-bullets/title-screen": {
+    "widths": [
+      1600,
+      1000,
+      600
+    ],
+    "width": 1919,
+    "height": 1199
+  },
+  "crystal-cavern/pickaxe-timing": {
+    "widths": [
+      1000,
+      600
+    ],
+    "width": 1270,
+    "height": 857
+  },
+  "through-hell-for-you/boss-encounter": {
+    "widths": [
+      1000,
+      600
+    ],
+    "width": 1382,
+    "height": 740
+  }
+}

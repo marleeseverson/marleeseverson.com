@@ -1,0 +1,145 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+
+.matrixWrap {
+  overflow-x: auto;
+}
+
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 460px;
+}
+
+.cornerCell {
+  width: 32%;
+}
+
+.colHead {
+  text-align: center;
+  color: var(--muted);
+  padding: 0 4px 14px;
+  font-weight: 500;
+  vertical-align: bottom;
+}
+
+.colFull {
+  display: block;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  margin-inline: auto;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.colShort {
+  display: none;
+}
+
+.groupHead {
+  text-align: left;
+  color: var(--muted);
+  padding: 18px 0 8px;
+  border-bottom: 1px solid var(--fg);
+  font-weight: 500;
+}
+
+.row {
+  border-bottom: 1px solid var(--rule);
+}
+
+.rowHead {
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 11px 0;
+  white-space: nowrap;
+}
+
+.cell {
+  text-align: center;
+  padding: 11px 4px;
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.cell[data-used] .dot {
+  background: var(--fg);
+  border-color: var(--fg);
+}
+
+.row:hover .cell[data-used] .dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.25);
+}
+
+.concepts {
+  display: grid;
+  gap: 8px;
+}
+
+.conceptsTitle {
+  color: var(--muted);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--fg);
+  font-weight: 500;
+}
+
+.conceptList {
+  display: grid;
+}
+
+.concept {
+  display: grid;
+  gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.conceptName {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.conceptWhere {
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .matrix {
+    min-width: 0;
+  }
+  .colFull {
+    display: none;
+  }
+  .colShort {
+    display: inline;
+  }
+  .rowHead {
+    font-size: 0.95rem;
+  }
+}
